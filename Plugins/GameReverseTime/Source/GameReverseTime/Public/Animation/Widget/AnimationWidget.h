@@ -1,11 +1,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "PaperFlipbook.h"
 #include "Blueprint/UserWidget.h"
 #include "PaperFlipbookComponent.h"
 #include "Engine/StreamableManager.h"
 #include "Animation/AnimationStruct.h"
-#include "Paper2D/Classes/PaperFlipbook.h"
 #include "AnimationWidget.generated.h"
 
 /**

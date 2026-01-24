@@ -44,7 +44,8 @@ public class GameReverseTimeEditor : ModuleRules
                 "Engine",
                 "CoreUObject",
                 "GameReverseTime",
-                "PakFileUtilities"
+                "PakFileUtilities",
+                "Paper2D"
                  // ... add private dependencies that you statically link with here ...	
              }
              );

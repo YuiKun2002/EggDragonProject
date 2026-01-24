@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "SListViewArea.h"
+#include "Templates/SharedPointer.h"
 #include "ListViewArea.generated.h"
 
 /**

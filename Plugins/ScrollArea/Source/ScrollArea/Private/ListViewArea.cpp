@@ -1,5 +1,6 @@
 ﻿#include "ListViewArea.h"
 
+
 TSharedRef<STableViewBase> UListViewArea::RebuildListWidget()
 {
 	TSharedRef<SListViewArea<UObject*>> Ref = ConstructListView<SListViewArea>();

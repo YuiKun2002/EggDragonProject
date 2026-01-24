@@ -7,6 +7,7 @@
 #include "Components/ListView.h"
 #include "Slate/SObjectWidget.h"
 #include "Slate/SObjectTableRow.h"
+#include "Templates/SharedPointer.h"
 
 /*
 	Engine->input
@@ -63,7 +64,7 @@ protected:
 				this->InertialScrollManager.ClearScrollVelocity();
 				AmountWhileMouseLeft = 0;
 				bMouseLeftInteraction = true;
-				return FReply::Handled().CaptureMouse(SharedThis(this));
+				return FReply::Handled().CaptureMouse(TSharedRef<SWidget>(this));
 			}
 		}
 #endif

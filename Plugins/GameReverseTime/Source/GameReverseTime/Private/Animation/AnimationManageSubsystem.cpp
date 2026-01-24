@@ -1,9 +1,9 @@
 #include "Animation/AnimationManageSubsystem.h"
 #include "Animation/Widget/AnimationWidget.h"
-#include "Paper2D/Classes/PaperFlipbook.h"
 #include "Animation/AnimationComponent.h"
 #include "Engine/StreamableManager.h"
 #include "Engine/AssetManager.h"
+#include "PaperFlipbook.h"
 
 void UAnimationManageSubsystem::RequestLoadAnimation(UAnimationComponent* AnimComp)
 {

@@ -1,10 +1,10 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "PaperFlipbook.h"
 #include "PaperFlipbookComponent.h"
 #include "Engine/StreamableManager.h"
 #include "Animation/AnimationStruct.h"
-#include "Paper2D/Classes/PaperFlipbook.h"
 #include "AnimationComponent.generated.h"
 
 /*

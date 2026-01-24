@@ -7,6 +7,7 @@
 #include "UObject/ObjectPtr.h"
 #include "Slate/SObjectWidget.h"
 #include "Slate/SObjectTableRow.h"
+#include "Templates/SharedPointer.h"
 #include "Widgets/Views/STileView.h"
 
 //瓦片视图列表
@@ -50,18 +51,7 @@ protected:
 	//如果当前控件触发了输入，那么直接处理
 	virtual FReply OnMouseButtonDown(const FGeometry& MyGeometry, const FPointerEvent& MouseEvent) override
 	{
-#if PLATFORM_WINDOWS
-		if (!MouseEvent.IsTouchEvent() && this->bAllowMouseLeft)
-		{
-			if (MouseEvent.GetEffectingButton() == EKeys::LeftMouseButton)
-			{
-				this->InertialScrollManager.ClearScrollVelocity();
-				AmountWhileMouseLeft = 0;
-				bMouseLeftInteraction = true;
-				return FReply::Handled().CaptureMouse(SharedThis(this));
-			}
-		}
-#endif
+
 		return STileView<ItemType>::OnMouseButtonDown(MyGeometry, MouseEvent);
 	}
 
