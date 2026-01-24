@@ -10,7 +10,8 @@ public class EggDragonProject : ModuleRules
 
         PublicDependencyModuleNames.AddRange(new string[] {
             "Core", "CoreUObject", "Engine", "InputCore","Paper2D" ,"UMG","Slate"
-        ,"ScrollArea","PolygonButton","GameReverseTime", "DataTableEditorUtilities"
+        ,"ScrollArea","PolygonButton","GameReverseTime", "DataTableEditorUtilities",
+            "JsonBlueprintUtilities"
         });
 
         PrivateDependencyModuleNames.AddRange(new string[] { });
