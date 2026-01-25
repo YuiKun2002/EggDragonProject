@@ -28,6 +28,9 @@ public:
 	UFUNCTION(BlueprintPure, Category = "获取数据表")
 	UDataTable* GetDataByName(FName Name);
 	UDataTable* GetDataByName_Imp(GameDataName&& Name);
+	//强制同步加载所有的数据表
+	UFUNCTION(BlueprintCallable, Category = "数据表加载")
+	void ForceLoadAllData();
 	//获取已经加载的数据表格资产
 	UFUNCTION(BlueprintPure, Category = "获取已加载的数据表格资产组")
 	FORCEINLINE	TMap<FName, class UDataTable*> GetAllDataInstance() const { return this->DataInstance; }

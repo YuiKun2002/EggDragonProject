@@ -37,6 +37,21 @@ UDataTable* UGameDataAssetObject::GetDataByName_Imp(GameDataName&& Name)
 	return nullptr;
 }
 
+void UGameDataAssetObject::ForceLoadAllData()
+{
+	for (auto Data : this->Datas)
+	{
+		if (!this->DataInstance.Contains(Data.Key))
+		{
+			UDataTable* NewData = Data.Value.LoadSynchronous();
+			if (IsValid(NewData))
+			{
+				this->DataInstance.Emplace(Data.Key, NewData);
+			}
+		}
+	}
+}
+
 void UGameDataAssetObject::Unload()
 {
 	for (auto& Instance : this->DataInstance)
