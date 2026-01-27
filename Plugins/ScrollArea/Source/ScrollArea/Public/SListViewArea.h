@@ -64,7 +64,7 @@ protected:
 				this->InertialScrollManager.ClearScrollVelocity();
 				AmountWhileMouseLeft = 0;
 				bMouseLeftInteraction = true;
-				return FReply::Handled().CaptureMouse(TSharedRef<SWidget>(this));
+				return FReply::Handled();
 			}
 		}
 #endif
